@@ -3,7 +3,7 @@
 # CRAN install / stable version 
 install.packages("gmapsdistance")
 library(gmapsdistance)
-set.api.key("AIzaSyDmIK6lIZBnm0L1dXoYn8Hj5NxXDvj4Lxg")
+set.api.key("insert_key")
 
 library(readxl)
 it <- read_excel("it.xlsx", range = "A1:C101", col_names = T) #read file
@@ -20,7 +20,7 @@ results <- gmapsdistance(origin = it$coord[81:100], #must change the window to c
                          destination = it$coord[81:100], #could improve it using a loop
                          combinations = "all",
                          mode = "driving",
-                         key = "AIzaSyDmIK6lIZBnm0L1dXoYn8Hj5NxXDvj4Lxg",
+                         key = "insert_key",
                          #departure = round(as.numeric(Sys.time())),
                          dep_date = "2023-02-09",
                          dep_time = "12:00:00",
